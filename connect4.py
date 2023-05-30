@@ -32,16 +32,21 @@ def mark_board(x,player=1):
     if not moved:
         n=int(len(board))
         board[n-2][x]=p
-    check_win(player)
+    return [check_win(player), player]
 
 def check_win(player=1):
     p="1" if player==1 else "2"
+    win=False
     s_win=True
     s_win_c=0
+    h_win=True
+    h_win_c=0
     d_win_1=True
     d_win_1=0
     d_win_2=True
     d_win_2=0
+
+    # Checking for a vertical win (straight win)
     for i in range(len(board)-1):
         for x in range(len(board[i])):
             if board[i][x] != "X" and board[i][x]==p:
@@ -57,7 +62,8 @@ def check_win(player=1):
                             s_win=False
                             break
                     if s_win is True and s_win_c==3:
-                        print(f"{player} won with x: {x+1} and y: {i+1}")
+                        print(f"{player} won with x: {x+1} and y: {i+1} (s win)")
+                        win=True
                         break                   
                     break
                 except IndexError:
@@ -67,14 +73,42 @@ def check_win(player=1):
         break        
             #break
 
-
+    # Checking for a horizontal win
+    for i in range(len(board)-1):
+        for x in range(len(board[i])):
+            if board[i][x] != "X" and board[i][x]==p:
+                h_win_c=0
+                try:
+                    for j in range(3):
+                        if x+j+1>=len(board[i]):
+                            h_win=False
+                            break
+                        if board[i][x+j+1]==p:
+                            h_win_c+=1
+                        else:
+                            h_win=False
+                            break
+                    if h_win is True and h_win_c==3:
+                        print(f"{player} won with x: {x+1} and y: {i+1} (h win)")
+                        win=True
+                        break                   
+                    break
+                except IndexError:
+                    h_win=False
+                    break
+        else:continue
+        break
+    return win  
 
 
 y=True
 while y:
     x=int(input("Enter X coordinate: "))
     if x>=len(board) or x<0:print("Invalid Move")
-    else: mark_board(x, 1)
+    else: won=mark_board(x, 1)
+    if won[0] is True: 
+        print(f"Player {won[1]} won so game ended")
+        break
     display_board()
     yes=input("want to continue ?")
     if yes=="yes":y=False

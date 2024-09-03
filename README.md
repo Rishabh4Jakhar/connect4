@@ -21,4 +21,4 @@ Game is by default a 6x7 matrix game but `ROW_COUNT` and `COLUMN_COUNT` can be c
 - Player 2 wins
   [Image]()
 - Draw
-  [Image](https://raw.githubusercontent.com/Rishabh4Jakhar/connect4/main/assets/imgs/draw.jpeg)
+  ![Image](https://github.com/Rishabh4Jakhar/connect4/blob/main/assets/imgs/draw.jpeg?raw=True)

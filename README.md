@@ -18,11 +18,14 @@ Game is by default a 6x7 matrix game but `ROW_COUNT` and `COLUMN_COUNT` can be c
 
 - Player 1 wins
   <br>
-  <img src="https://github.com/user-attachments/assets/f26091d9-78ce-4728-98ce-cca5a5572f96" height="250">
+  <img src="https://github.com/user-attachments/assets/f26091d9-78ce-4728-98ce-cca5a5572f96" height="500">
   
 - Player 2 wins
   <br>
-  ![Image](https://github.com/Rishabh4Jakhar/connect4/blob/main/assets/imgs/player2.jpeg?raw=True)
+  <img src="https://github.com/user-attachments/assets/1a7e9a89-c1dc-45b2-985d-9b07892a7f12" height="500">
+
 - Draw
   <br>
-  ![Image](https://github.com/Rishabh4Jakhar/connect4/blob/main/assets/imgs/draw.jpeg?raw=True)
+  <img src="https://github.com/user-attachments/assets/d02e0484-6d72-4387-94b6-5532e27440b4" height="500">
+
+  

@@ -1,6 +1,9 @@
 # Connect 4
 
-Classic game of connect 4 (Tic Tac Toe but 4 in a row and gravity enabled placement of pieces)
+Classic game of connect 4 (Tic Tac Toe but 4 in a row and gravity enabled placement of pieces).
+<br>
+Made for ESYA 2023 Game Jam event.
+<br>
 Game is by default a 6x7 matrix game but `ROW_COUNT` and `COLUMN_COUNT` can be changed inside `connect4.py`.
 
 ## Files

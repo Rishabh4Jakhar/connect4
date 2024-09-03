@@ -175,7 +175,7 @@ while not game_over:
 						pygame.mixer.music.play()
 						if draw:
 							label = myfont.render("Draw!!", 0, (255,255,255))
-							screen.blit(label, (40,10))
+							screen.blit(label, ((width//2)-40,10))
 						else:
 							label = myfont.render("Player 1 wins!!", 0, (100,255,184))
 							screen.blit(label, (40,10))
@@ -212,7 +212,7 @@ while not game_over:
 						pygame.mixer.music.play()
 						if draw:
 							label = myfont.render("Draw!!", 0, (255,255,255))
-							screen.blit(label, (40,10))
+							screen.blit(label, ((width//2)-40,10))
 						else:
 							label = myfont.render("Player 2 wins!!", 0, (255,68,42))
 							screen.blit(label, (40,10))
